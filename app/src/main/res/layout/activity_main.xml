@@ -28,39 +28,30 @@
         android:layout_marginBottom="10sp"
         >
 
+        <!--we can apply the style using the style attribute-->
         <TextView
             android:id="@+id/label1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/GeneralText.Bold.Red"
             android:text="Label: "
             />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/GeneralText"
             android:layout_toRightOf="@id/label1"
-            android:textSize="20sp"
             android:text="First piece of information..."
             />
 
         <TextView
             android:id="@+id/label2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/label1"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/GeneralText.Bold"
             android:text="Label: "
             />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/label1"
             android:layout_toRightOf="@id/label2"
-            android:textSize="20sp"
+            style="@style/GeneralText"
             android:text="More information here..."
             android:layout_marginBottom="10sp"
             />
@@ -90,6 +81,9 @@
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_call"
             android:onClick="callNumber"
+            android:contentDescription="Dial"
+            android:focusable="true"
+            android:nextFocusRight="@id/btnPicture"
             />
 
         <ImageButton
@@ -99,6 +93,7 @@
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_camera"
             android:onClick="takePicture"
+            android:contentDescription="Take Picture"
             />
 
         <ImageButton
@@ -108,6 +103,7 @@
             android:layout_weight="1"
             android:src="@android:drawable/ic_menu_send"
             android:onClick="sendMessage"
+            android:contentDescription="Message"
             />
 
     </LinearLayout>
